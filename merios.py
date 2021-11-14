@@ -13,7 +13,7 @@ tickerSymbol = st.selectbox('company',['ATVI','GOOGL','TSLA'])
 #get data on this ticker
 tickerData = yf.Ticker(tickerSymbol)
 #get the historical prices for this ticker
-tickerDf = tickerData.history(period='1d', start='2019-5-31', end='2021-09-30')
+tickerDf = tickerData.history(period='1d', start='2019-5-31', end='2020-09-20')
 # Open	High	Low	Close	Volume	Dividends	Stock Splits
 
 st.line_chart(tickerDf.Close)
