@@ -3,13 +3,13 @@ import streamlit as st
 
 st.write("""
 # Simple Stock Price App
-### Shown are the stock closing price and volume of KING,GOOGLE and TESLA!!!
-@Mera merios
+### Shown are the stock closing price and volume of Google,KING and TESLA!
+meramerios
 """)
 
 # https://towardsdatascience.com/how-to-get-stock-data-using-python-c0de1df17e75
 #define the ticker symbol
-tickerSymbol = 'GOOGL'
+tickerSymbol = st.selectbox('company',['ATVI','GOOGL','TSLA'])
 #get data on this ticker
 tickerData = yf.Ticker(tickerSymbol)
 #get the historical prices for this ticker
